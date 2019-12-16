@@ -3,7 +3,7 @@
 ### Perfect website for who wants to start their spa business.
 ### This site includes all pages like services, gallery, about, contact us ,customer management and appointments.
 ## Wireframes
-### [Wirefarmes link](https://sgparikh.github.io/FinalProject/images/wireframes/wireframe.html)
+### [Wirefarmes link](https://sgparikh.github.io/FinalProject/images/wireframe.html)
 ## Business rules
 ### 1)	Customer book an appointment for that they must required account creation in system
 ### 2)	Store address can be viewed in google map on “Contact US” page.
