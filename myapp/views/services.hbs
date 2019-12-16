@@ -1,0 +1,389 @@
+<div class="Subheading">
+    <!-- Section heading -->
+    <h2 class="h2-responsive font-weight-bold text-left my-3">{{heading}}</h2>
+</div>
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+            aria-controls="collapseOne">
+            <h4 class="h4-responsive font-weight-bold text-center my-3">Massages</h4>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+
+            <sectipn class="Massages">
+
+                <div class="card-deck services">
+                    {{# each services}}
+                    <div class="card">
+                        <img src="/images/services/{{this.imagePath}}" class="card-img-top" alt="{{this.title}}" style="height: 150px;">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <h4>{{this.title}}</h4>
+                            </h4>
+                            <p class="card-text">{{this.description}}</p>
+                            <p class="card-text">60 minutes : <strong>${{this.price60}}</strong><br> 90 minutes :
+                                <strong>${{this.price90}}</strong></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" data-toggle="modal" data-target="#{{this.popup}}">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Modal Swedish Massage -->
+                    <div class="modal fade" id="{{this.popup}}" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalScrollableTitle">{{this.title}} – {{this.subType}}
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <article class="service-article">
+                                        <div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <ul>
+                                                        <li><strong>{{this.subType}} Massage</strong></li>
+                                                        <li><strong>Length:</strong><br> {{this.Length}}</li>
+                                                        <li><strong>Type of massage:</strong><br> {{this.Typeofmassage}}
+                                                        </li>
+                                                        <li><strong>Technique:</strong><br> {{this.technique}}</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <ul>
+                                                        <li><strong>Benefits:</strong><br>{{this.Benifits}}</li>
+                                                        <li><strong>Rate:</strong><br> 60 minutes: ${{this.price60}}<br> 90 minutes:
+                                                            ${{this.price90}}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-article-content">
+                                            <p>{{this.desc1}}</p>
+                                            <p>{{this.desc2}}</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </sectipn>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+            aria-controls="collapseTwo">
+            <h4 class="h4-responsive font-weight-bold text-center my-3">Body Care</h4>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <section class="BodyCare">
+
+                <div class="card-deck services">
+                    {{# each Bodycare}}
+                    <div class="card">
+                        <img src="/images/services/{{this.imagePath}}" class="card-img-top" alt="{{this.title}}">
+                        <div class="card-body">
+                            <h4 class="card-title">{{this.title}}</h4>
+                            <p class="card-text">{{this.description}}</p>
+                            <p class="card-text">60 minutes : <strong>{{this.price60}}</strong></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" data-toggle="modal" data-target="#{{this.popup}}">Read More</a>
+                        </div>
+                    </div>
+                     <!-- Modal Swedish Massage -->
+                    <div class="modal fade" id="{{this.popup}}" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalScrollableTitle">{{this.title}} – {{this.subType}}
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <article class="service-article">
+                                        <div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <ul>
+                                                        <li><strong>{{this.subType}} Massage</strong></li>
+                                                        <li><strong>Length:</strong><br> {{this.Length}}</li>
+                                                        <li><strong>Type of massage:</strong><br> {{this.Typeofmassage}}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <ul>
+                                                        <li><strong>Benefits:</strong><br>{{this.Benifits}}</li>
+                                                        <li><strong>Rate:</strong><br> 60 minutes: ${{this.price60}}<br> 90 minutes:
+                                                            ${{this.price90}}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-article-content">
+                                            <p>{{this.desc1}}</p>
+                                            <p>{{this.desc2}}</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree"
+            aria-expanded="false" aria-controls="collapseThree">
+            <h4 class="h4-responsive font-weight-bold text-center my-3">Spa Rates</h4>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <section>
+                <section class="block layout1  minimize-bottom-padding white normal">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="block_content normal">
+                                    <p style="text-align: center;">All spa rates are for a single person. Double
+                                        them to
+                                        experience
+                                        relaxation in pairs!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h3>Massages</h3>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="price-object">
+                                        <div class="row">
+
+                                            <div class="col-xs-8 col-sm-7 col-md-9"> Classic Massage (60 mins)</div>
+                                            <div class="col-xs-4 col-sm-5 col-md-3 text-right"> <span
+                                                    class="price-object-price">$128</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="price-object">
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-7 col-md-9"> Specialty Massage (60 mins)
+                                            </div>
+                                            <div class="col-xs-4 col-sm-5 col-md-3 text-right"> <span
+                                                    class="price-object-price">$143</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="price-object">
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-7 col-md-9"> Classic Massage (90 mins)</div>
+                                            <div class="col-xs-4 col-sm-5 col-md-3 text-right"> <span
+                                                    class="price-object-price">$173</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="price-object">
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-7 col-md-9"> Specialty Massage (90 mins)
+                                            </div>
+                                            <div class="col-xs-4 col-sm-5 col-md-3 text-right"> <span
+                                                    class="price-object-price">$183</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Body Care</h3>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="price-object">
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-7 col-md-9"> Classic Body Care Treatment (60
+                                                mins)</div>
+                                            <div class="col-xs-4 col-sm-5 col-md-3 text-right"> <span
+                                                    class="price-object-price">$118</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+{{!-- my code --}}
+
+<!-- Modal Swedish Massage -->
+<div class="modal fade" id="swedishMassage" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Swedish Massage – Classic</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <article class="service-article">
+                    <div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li><strong>Classic Massage</strong></li>
+                                    <li><strong>Length:</strong><br> Choice of 60 or 90 minutes</li>
+                                    <li><strong>Type of massage:</strong><br> Toning and relaxing</li>
+                                    <li><strong>Technique:</strong><br> Kneading and stretching</li>
+                                    <li><strong>Pressure level:</strong><br> Gentle or medium as per the person</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li><strong>Benefits:</strong><br> Relaxes the muscles, eliminates muscle
+                                        stiffness and tension, reduces depression, stress, and anxiety</li>
+                                    <li><strong>Rate:</strong><br> 60 minutes: $128<br> 90 minutes: $173</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-article-content">
+                        <p>Popular among active people, Swedish massages are the perfect balance between toning and
+                            relaxation. Their numerous benefits, such as muscle tension relief, improved
+                            circulation, and reduced side effects of stress, are designed to revitalize the body.
+                            Using gentle-to-medium pressure, each kneading and stretching motion is adapted to your
+                            needs and is used specifically to warm your muscles and loosen your joints. This massage
+                            is one of the most popular in the Western world.</p>
+                        <p>Contact our customer service agents. They are available to advise you and help you choose
+                            the right massage for all your needs!</p>
+                    </div>
+                </article>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------- -->
+<!-- Modal Deep Tissue Massage -->
+<div class="modal fade" id="test" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Deep Tissue Massage – Specialty</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <article class="service-article">
+                    <div>
+                        <h3 class="service-article-subheading">At a glance</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li><strong>Specialty Massage</strong></li>
+                                    <li><strong>Length:</strong><br> 60 minutes</li>
+                                    <li><strong>Type of massage:</strong><br> Targeted, intense, deep</li>
+                                    <li><strong>Technique:</strong><br> Slow and deep and specific.</li>
+                                    <li><strong>Pressure level:</strong><br> Strong, medium, and firm</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li><strong>Benefits:</strong><br> Eases nervous tension, relieves muscle
+                                        tension, and reduces recovery time</li>
+                                    <li><strong>Features:</strong><br> Treats chronic discomfort and persistent pain
+                                    </li>
+                                    <li><strong>Rate:</strong><br> 60 minutes: $143</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-article-content">
+                        <p>Are you suffering from persistent or recurring muscle pain because of improper movements,
+                            poor posture, daily stress, or a sport? This specialized massage uses a technique that
+                            targets deep muscle layers and is particularly effective in releasing chronic tension in
+                            contracted areas. The techniques used in this massage are based in the fingers, the
+                            elbows, and forearms, encouraging deep tissue work. Both the problem area of the body
+                            and the surrounding areas are prioritized during the massage. Let us take care of you.
+                        </p>
+                        <p>Contact our customer service agents. They are available to advise you and help you choose
+                            the right massage for all your needs!</p>
+                    </div>
+                </article>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------- -->
+<!-- Modal Swedish Massage -->
+<div class="modal fade" id="swedishMassage" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Swedish Massage – Classic</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

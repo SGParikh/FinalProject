@@ -1,0 +1,81 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-5 mainform">
+                <div class="headinglogin">
+                    <h2>
+                        Login
+                    </h2>
+                </div>
+                <form class="login-form form" action="/login/signin" method="post">
+                    {{> message}}
+                    <div class="form-group">
+                        <div class="row">
+
+                            <div class="col-md form-field form-field--input form-field--inputEmail">
+                                <label for="email" class="control-label">Email address</label>
+                                <input type="email" id="email" class="form-control" placeholder="Email address" name="email"
+                                    required autofocus></div>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+
+                            <div class="col-md form-field form-field--input form-field--inputPassword">
+                                <label for="password" class="control-label">Password</label>
+                                <input type="password" id="password" class="form-control" placeholder="Password" name="password"
+                                    required></div>
+
+                        </div>
+
+                    </div>
+                    {{!-- <div class="form-group">
+                        <div class="row">
+                            <div class="col-md checkbox" style="text-align: center;">
+                                <a class="forgot-password" href="#">Forgot your
+                                    password?</a>
+                            </div>
+                        </div>
+
+                    </div> --}}
+                    <button class="btn btn-lg btn-primary btn-block btnform loginButton" type="submit"
+                        style="border-radius: 5px;">Sign in</button>
+                </form>
+                <p>No Account?<a href="./register">Register</a></p>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+</section>
+{{!-- <script>
+    function validation(a, b) {
+        var a = document.forms["Registration-form"]["a"].value;
+        //var b = document.forms["Registration-form"]["b"].value;
+        var message = ""
+        if (a === "") {
+            message += "Fist name must be required <br/>"
+        }
+        if (b === "") {
+            message += "Last name must be required"
+        }
+        if (message == "") {
+            return true;
+        }
+        else {
+            document.querySelector("#result").textContent = message;
+            return false;
+        }
+    }
+</script> --}}
+{{!-- <script>
+
+    $('button.registerButton').click(function () {
+        alert('hi')
+        $('Registration-form').submit();
+    });
+</script> --}}

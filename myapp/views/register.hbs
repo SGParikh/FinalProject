@@ -1,0 +1,74 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6 mainform">
+                <div class="headinglogin">
+                    <h2>Register</h2>
+                </div>
+                <form class="Registration-form form" action="/register/register" method="post"
+                    role="form">
+                    <span id="result"></span>
+                    {{> message}}
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md">
+                                <label for="firstName" class="control-label">First Name</label>
+                                <div>
+                                    <input type="text" id="firstName" placeholder="First Name"  name="firstName"
+                                        required autofocus>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <label for="lastName" class="control-label">Last Name</label>
+                                <div>
+                                    <input type="text" id="lastName" placeholder="Last Name" name="lastName" required>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md">
+                                <label for="email" class="control-label">Email* </label>
+                                <div>
+                                    <input type="email" id="email" placeholder="Email" class="form-control"
+                                        name="email" required>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md">
+                                <label for="password" class="control-label">Password*</label>
+                                <div>
+                                    <input type="password" id="password" placeholder="Password" class="form-control"
+                                        name="password" required>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <label for="cpassword" class="control-label">Confirm Password*</label>
+                                <div>
+                                    <input type="password" id="cpassword" placeholder="Confirm Password"
+                                        class="form-control" name="cpassword" required>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btnform registerButton"
+                        style="border-radius: 5px;">Register</button>
+                </form> <!-- /form -->
+                <p>Have An Account?<a href="./login">Login</a></p>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+</section>
+{{!-- onsubmit="return validation(this['firstName'].value,this['lastName'].value);" --}}

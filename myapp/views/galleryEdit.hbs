@@ -1,0 +1,35 @@
+        <section>
+        <div class="row">    
+         <div class="headinglogin">
+                    <h2>Edit Gallery</h2>
+                </div>
+                <form class="Registration-form form" action="/galleryEdit/update/{{gallery._id}}?_method=PUT" method="post" enctype="multipart/form-data" role="form">
+                    <span id="result"></span>
+                    {{> message}}
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md">
+                                <label for="title" class="control-label">Title</label>
+                                <div>
+                                    <input type="text" id="title" placeholder="Title" name="title" value="{{gallery.title}}" required autofocus>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md">
+                                 <input type="file" id="customFile" name="customFile" value="{{gallery.imagePath}}" required>
+                            {{!-- <label class="custom-file-label" for="customFile">Choose image</label> --}}
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btnform registerButton"
+                        style="border-radius: 5px;">Update</button>
+                </form> 
+                </div>
+        </section>

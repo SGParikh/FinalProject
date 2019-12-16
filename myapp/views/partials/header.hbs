@@ -1,0 +1,73 @@
+  <div class="navbar-info">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 info-left">
+            <a traget="_blank" href="https://facebook.com/" title="facebook" class="btn">
+              <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/"  target="_blank" class="btn">
+            <i class="fa fa-instagram"></i></a>
+            <a  href="https://twitter.com//" title="twitter" target="_blank" class="btn">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          <a traget="_blank" href="https://plus.google.com/" title="Google+" target="_blank" class="btn">
+              <i class="fa fa-google-plus"></i>
+          </a>
+        </div>
+        <div class="col-md-10 info-right"><span class="fa fa-phone"> </span> 1 (306) 526-0000 <span
+            class="spaseperator">&nbsp;|&nbsp; </span><span class="fa fa-map-marker"> </span> 2755 31st Avenue., Regina, Sk, Canada. <span class="spaseperator">&nbsp;|&nbsp; </span>
+            <span class="fa fa-envelope-o"> </span> <a href="#" class="spalink">Sweta@fakemail.com</a> <span
+            class="spaseperator">&nbsp;
+          {{#if user}}
+          |&nbsp; <a href="#"  class="spalink"><span class="fa fa-shopping-cart"> </span> Cart(0)&nbsp;</a>
+           &nbsp;|&nbsp; Welcome {{user.firstName}} {{user.lastName}}&nbsp;|&nbsp; 
+           <a  href="#" onclick="document.getElementById('form-logout').submit();return false">Log Out</a>&nbsp; 
+           <form id="form-logout" action="/login/logout" method="POST">
+            </form>  
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-brand"><span class="big-logo">Relish</span><br><span class="small-logo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spa and Wellness</span></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">HOME<span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gallery">GALLERY</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            ABOUT
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/contact">CONTACT US</a>
+            <a class="dropdown-item" href="/about">ABOUT US</a>
+            <a class="dropdown-item" href="/about">OUR HOURS</a>
+            <a class="dropdown-item" href="/about">OUR POLICIES</a>
+            <a class="dropdown-item" href="/about">SPA ETIQUETTE</a>
+            <a class="dropdown-item" href="/about">AMMENITIES</a>
+          </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/galleryMT">GALLERY MANAGEMENT</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link btn btn-danger" id="linkappointment" href="/onlineBooking">APPOINTMENT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
